@@ -1,7 +1,7 @@
+import com.brianlukonsolo.hashing.HashSha256;
 import lombok.extern.log4j.Log4j;
 import org.junit.Test;
 
-import java.io.UnsupportedEncodingException;
 import java.security.NoSuchAlgorithmException;
 
 @Log4j

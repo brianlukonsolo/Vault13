@@ -1,3 +1,4 @@
+import com.brianlukonsolo.hashing.HashMd5;
 import lombok.extern.log4j.Log4j;
 import org.junit.Test;
 
