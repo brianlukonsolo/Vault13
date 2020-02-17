@@ -9,14 +9,14 @@ public class HashSha256Test {
     @Test
     public void itShouldReturnAnMd5HashStringWhenGivenAnInputString() throws NoSuchAlgorithmException {
         String textInput = "inputStringToBeProcessed";
-        String expectedHash = "ae0a019b4cf26c7b8dff0be80f4ec6cbfa4866c660846dfb03f887482ca220d8";
+        String expectedSha256Hash = "ae0a019b4cf26c7b8dff0be80f4ec6cbfa4866c660846dfb03f887482ca220d8";
 
         HashSha256 sha256Hash = new HashSha256();
         String actual = sha256Hash.calculateSha256DigestValue(textInput);
         log.info("Actual: " + actual);
-        log.info("Expected: " + expectedHash);
+        log.info("Expected: " + expectedSha256Hash);
 
-        assert (actual.equals(expectedHash));
+        assert (actual.equals(expectedSha256Hash));
     }
 
 }
