@@ -5,13 +5,14 @@ import java.io.UnsupportedEncodingException;
 import java.security.NoSuchAlgorithmException;
 
 @Log4j
-public class HashMd5Test {
+public class HashSha256Test {
     @Test
-    public void itShouldReturnAnMd5HashStringWhenGivenAnInputString() throws NoSuchAlgorithmException, UnsupportedEncodingException {
+    public void itShouldReturnAnMd5HashStringWhenGivenAnInputString() throws NoSuchAlgorithmException {
         String textInput = "inputStringToBeProcessed";
-        String expectedHash = "8db61ac065813983432a4b11334fd359";
-        HashMd5 md5Hash = new HashMd5();
-        String actual = md5Hash.calculateMd5DigestValue(textInput);
+        String expectedHash = "ae0a019b4cf26c7b8dff0be80f4ec6cbfa4866c660846dfb03f887482ca220d8";
+
+        HashSha256 sha256Hash = new HashSha256();
+        String actual = sha256Hash.calculateSha256DigestValue(textInput);
         log.info("Actual: " + actual);
         log.info("Expected: " + expectedHash);
 
